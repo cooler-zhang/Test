@@ -7,12 +7,21 @@ using Newtonsoft.Json;
 
 namespace ConsoleAppTest
 {
-    class Program
+    internal class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
-            Test12HourTo24Hour();
+            TestStringParse();
             Console.ReadLine();
+        }
+
+        public static void TestStringParse()
+        {
+            object abc = null;
+            var result = abc as string;
+            Console.WriteLine(result);
+            var result2 = (string)abc;
+            Console.WriteLine(result2);
         }
 
         public static void TestDatetimeSerleralize()
@@ -20,8 +29,8 @@ namespace ConsoleAppTest
             var nowString = JsonConvert.SerializeObject(DateTime.Now);
             Console.WriteLine(nowString);
             var now = Convert.ToDateTime(nowString);
-            var testDate = new DateTime(2019,10,10,0,0,0,DateTimeKind.Utc);
-            var testString =JsonConvert.SerializeObject(testDate);
+            var testDate = new DateTime(2019, 10, 10, 0, 0, 0, DateTimeKind.Utc);
+            var testString = JsonConvert.SerializeObject(testDate);
             Console.WriteLine(testString);
         }
 
@@ -48,7 +57,7 @@ namespace ConsoleAppTest
             Console.WriteLine("All 1:" + items.All(a => a.Equals("a")));
             Console.WriteLine("All 2:" + items.All(a => a != null));
         }
-        
+
         public static void Test12HourTo24Hour()
         {
             Console.WriteLine(DateTime.Parse("04:00 PM").ToString("yyyy-MM-dd HH:mm:ss"));
