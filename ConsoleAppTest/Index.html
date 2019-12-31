@@ -5,12 +5,29 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Page Title</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
     <script type="text/javascript">
-        var text = "key___value_";
-        alert(text.split(/_(.+)?/,2));
+        function isUndefined(value) {
+            return typeof value === 'undefined';
+        }
+
+        function testJqueryUndefine(){
+            var json = {id:1,name:'cooler'};
+            console.log(!isUndefined(json));
+            console.log(!isUndefined(json.id));
+            console.log(!isUndefined(json.age));
+        }
+
+        function testRegexSplit() {
+            var text = "key___value_";
+            alert(text.split(/_(.+)?/, 2));
+        }
+
+        $(function(){
+            testJqueryUndefine();
+        })
     </script>
 </head>
 <body>
-    
 </body>
-</html>>
+</html>

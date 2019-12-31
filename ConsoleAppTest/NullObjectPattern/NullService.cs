@@ -1,4 +1,4 @@
-namespace ConsoleAppTest.NullObjectPattern
+namespace Cooler.ConsoleTest.NullObjectPattern
 {
     public class NullService : IService
     {

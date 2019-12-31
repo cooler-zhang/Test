@@ -1,11 +1,10 @@
-﻿using System.Runtime.InteropServices;
-using System.Linq;
+﻿using Cooler.ConsoleTest.NullObjectPattern;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
-using ConsoleAppTest.NullObjectPattern;
-using Newtonsoft.Json;
+using System.Linq;
 
-namespace ConsoleAppTest
+namespace Cooler.ConsoleTest
 {
     internal class Program
     {
