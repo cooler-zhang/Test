@@ -5,10 +5,10 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 
-namespace Tests
+namespace Cooler.UnitTest
 {
     [TestFixture]
-    public class UnitTest1
+    public class UnitTest1 : BaseTest
     {
         [SetUp]
         public void Setup()
