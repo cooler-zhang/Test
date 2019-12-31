@@ -7,7 +7,8 @@ using System.Linq;
 
 namespace Tests
 {
-    public class Tests
+    [TestFixture]
+    public class UnitTest1
     {
         [SetUp]
         public void Setup()
@@ -52,7 +53,7 @@ namespace Tests
         }
 
         [Test]
-        public static void Test12HourTo24Hour()
+        public void Test12HourTo24Hour()
         {
             Debug.WriteLine(DateTime.Parse("04:00 PM").ToString("yyyy-MM-dd HH:mm:ss"));
             Debug.WriteLine(DateTime.Parse("05:05 PM").ToString("yyyy-MM-dd HH:mm:ss"));
